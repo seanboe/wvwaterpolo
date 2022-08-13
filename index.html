@@ -22,7 +22,9 @@
         theme: {
           backgroundImage: {
             'background': "url('/public/images/background.jpg')",
-            'wv-logo': "url('/public/images/wv-logo.png')"
+            'wv-logo': "url('/public/images/wv-logo.png')",
+            'wv-bg': "url('/public/images/wv-bg.svg')"
+
           },
 
           extend: {
@@ -34,52 +36,49 @@
               'dark-gray': "#151515"
               // ''
             }
-
           }
-          
         }
       }
     </script>
 
   </head>
-  <body class="bg-light-gray">
+  <body class="">
 
-    <div class="shadow-2xl">
-      <nav class="bg-light-gray border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-900">
+    <div class="bg-background bg-cover bg-fixed">
+      <nav class="bg-dark-gray/30 border-gray-200 px-2 sm:px-4 py-2.5">
         <div class="container flex flex-wrap justify-between items-center mx-auto">
-          <a href="/" class="flex items-center"><img src="/public/images/wv-logo-big.png" class="mr-3 h-6 sm:h-9" alt="WV Logo"></a>
-          <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+          <a href="/" class="flex items-center p-1 bg-light-gray/30 rounded-xl"><img src="/public/images/wv-logo-big.png" class="mr-3 h-6 sm:h-9" alt="WV Logo"></a>
+          <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-dark-gold rounded-lg md:hidden bg-light-gray/30 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-600 transition-all duration-100 hover:text-gold" aria-controls="navbar-default" aria-expanded="false">
             <span class="sr-only">Open main menu</span>
             <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
           </button>
           <div class="hidden w-full md:block md:w-auto" id="navbar-default">
             <!-- NavBar -->
             <div class="font-extrabold">
-              <ul class="flex flex-col p-4 mt-4 bg-light-gray rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-lg md:font-medium md:border-0 md:bg-wv-gold">
+              <ul class="flex flex-col p-4 mt-4 bg-light-gray/30 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-lg md:font-medium md:border-0 md:bg-wv-gold">
                 <li>
-                  <a href="#" class="block py-2 pr-4 pl-3 text-dark-gray font-extrabold text-lg lg:text-xl transition-all duration-200 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-gold md:p-0 ">Home</a>
+                  <a href="#" class="block py-2 pr-4 pl-3 text-dark-gold font-extrabold text-lg lg:text-xl transition-all duration-100 rounded hover:bg-light-gray/60 md:hover:bg-transparent md:border-0 md:hover:text-gold md:p-0 ">Home</a>
                 </li>
                 <li>
-                  <a href="#" class="block py-2 pr-4 pl-3 text-dark-gray font-extrabold text-lg lg:text-xl transition-all duration-200 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-gold md:p-0 ">Home</a>
+                  <a href="#" class="block py-2 pr-4 pl-3 text-dark-gold font-extrabold text-lg lg:text-xl transition-all duration-100 rounded hover:bg-light-gray/60 md:hover:bg-transparent md:border-0 md:hover:text-gold md:p-0 ">Home</a>
                 </li>
                 <li>
-                  <a href="#" class="block py-2 pr-4 pl-3 text-dark-gray font-extrabold text-lg lg:text-xl transition-all duration-200 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-gold md:p-0 ">Home</a>
+                  <a href="#" class="block py-2 pr-4 pl-3 text-dark-gold font-extrabold text-lg lg:text-xl transition-all duration-100 rounded hover:bg-light-gray/60 md:hover:bg-transparent md:border-0 md:hover:text-gold md:p-0 ">Home</a>
                 </li>
                 <li>
-                  <a href="#" class="block py-2 pr-4 pl-3 text-dark-gray font-extrabold text-lg lg:text-xl transition-all duration-200 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-gold md:p-0 ">Home</a>
+                  <a href="#" class="block py-2 pr-4 pl-3 text-dark-gold font-extrabold text-lg lg:text-xl transition-all duration-100 rounded hover:bg-light-gray/60 md:hover:bg-transparent md:border-0 md:hover:text-gold md:p-0 ">Home</a>
                 </li>
                 <li>
-                  <a href="#" class="block py-2 pr-4 pl-3 text-dark-gray font-extrabold text-lg lg:text-xl transition-all duration-200 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-gold md:p-0 ">Home</a>
+                  <a href="#" class="block py-2 pr-4 pl-3 text-dark-gold font-extrabold text-lg lg:text-xl transition-all duration-100 rounded hover:bg-light-gray/60 md:hover:bg-transparent md:border-0 md:hover:text-gold md:p-0 ">Home</a>
                 </li>
               </ul>
             </div>
           </div>
         </div>
       </nav>
-    </div>
 
     <!-- Main area -->
-    <div class="bg-background bg-cover">
+    <!-- <div class="bg-background bg-cover"> -->
       <div class="p-8 grid grid-cols-3 gap-4 h-screen">
         <div class="col-span-2 text-center">
           <h1 class="font-extrabold px-48 drop-shadow-2xl shadow-red-900 text-gold text-2xl xs:text-3xl sm:text-4xl md:text-6xl lg:text-6xl xl:text-8xl">Westview Boys Water Polo</h1>
@@ -90,8 +89,59 @@
           </div>
         </div>
       </div>
+    <!-- </div> -->
     </div>
+
+    <!-- Image Carousel -->
+
+    <div class="bg-dark-gray/90">
+      <div class="px-24 py-16 bg-wv-bg bg-cover">
+        <div class="bg-light-gray/80 p-8 rounded-2xl">
+          <div id="indicators-carousel" class="relative" data-carousel="slide">
+            <!-- Carousel wrapper -->
+            <div class="relative h-56 overflow-hidden rounded-2xl md:h-96">
+                <!-- Item 1 -->
+                <div class="duration-1000 ease-in-out absolute inset-0 transition-all transform translate-x-0 z-20" data-carousel-item="active">
+                    <img src="/public/images/carousel1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                </div>
+                <!-- Item 2 -->
+                <div class="duration-1000 ease-in-out absolute inset-0 transition-all transform translate-x-full z-10" data-carousel-item="">
+                    <img src="/public/images/carousel1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                </div>
+                <!-- Item 3 -->
+                <div class="hidden duration-1000 ease-in-out absolute inset-0 transition-all transform" data-carousel-item="">
+                    <img src="/public/images/carousel1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                </div>
+                <!-- Item 4 -->
+                <div class="hidden duration-1000 ease-in-out absolute inset-0 transition-all transform" data-carousel-item="">
+                    <img src="/public/images/carousel1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                </div>
+                <!-- Item 5 -->
+                <div class="duration-1000 ease-in-out absolute inset-0 transition-all transform -translate-x-full z-10" data-carousel-item="">
+                    <img src="/public/images/carousel1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                </div>
+            </div>
+            <!-- Slider controls -->
+            <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev="">
+                <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/50 group-hover:bg-white/70 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
+                    <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    <span class="sr-only">Previous</span>
+                </span>
+            </button>
+            <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next="">
+                <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/50 group-hover:bg-white/70 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
+                    <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    <span class="sr-only">Next</span>
+                </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
     
+
     <script src="https://unpkg.com/flowbite@1.5.2/dist/flowbite.js"></script>
   </body>
 </html>
