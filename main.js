@@ -1,23 +1,21 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import { setupCounter } from './counter.js'
+// import './index.css'
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+function redirect(location) {
 
-setupCounter(document.querySelector('#counter'))
+  console.log("right here")
+
+  let base_url = window.location.origin
+
+  if (location == 0) {
+    window.location.replace(base_url)
+  }
+  else if (location == 1) {
+    window.location.replace(base_url + "/coaches.html")
+  }
+  else if (location == 2) {
+    window.location.replace(base_url + "/roster.html")
+  }
+  else if (location == 3) {
+    window.location.replace(base_url + "/schedule.html")
+  }
+}

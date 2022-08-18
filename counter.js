@@ -1,9 +1,12 @@
-export function setupCounter(element) {
-  let counter = 0
-  const setCounter = (count) => {
-    counter = count
-    element.innerHTML = `count is ${counter}`
+// import './index.css'
+
+function redirect(page) {
+
+  console.log("right here")
+
+  let base_url = window.location.origin
+
+  if (page == 1) {
+    window.location.replace(base_url)
   }
-  element.addEventListener('click', () => setCounter(++counter))
-  setCounter(0)
 }

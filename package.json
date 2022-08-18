@@ -9,6 +9,11 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.8",
+    "postcss": "^8.4.16",
     "vite": "^3.0.0"
+  },
+  "dependencies": {
+    "html-include-element": "^0.3.0"
   }
 }

@@ -5,14 +5,16 @@
 
     <!-- <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">  -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/src/index.css">
     <script src="/main.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.2/dist/flowbite.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.2/dist/flowbite.min.css"/>
+    <link href="https://unpkg.com/html-include-element"/>
+
     <script src="https://kit.fontawesome.com/9f3da960b8.js" crossorigin="anonymous"></script>
 
     <title>WV Water polo</title>
@@ -21,9 +23,9 @@
       tailwind.config = {
         theme: {
           backgroundImage: {
-            'background': "url('/public/images/background.jpg')",
-            'wv-logo': "url('/public/images/wv-logo.png')",
-            'wv-bg': "url('/public/images/wv-bg.svg')"
+            'background': "url('/images/background.jpg')",
+            'wv-logo': "url('/images/wv-logo.png')",
+            'wv-bg': "url('/images/wv-bg.svg')"
 
           },
 
@@ -34,20 +36,19 @@
               'light-yellow': "#fbfcd4",
               'light-gray': "#94a3b8",
               'dark-gray': "#151515"
-              // ''
+
             }
           }
         }
       }
     </script>
-
   </head>
   <body class="">
-
+    
     <div class="bg-background bg-cover bg-fixed">
       <nav class="bg-dark-gray/30 border-gray-200 px-2 sm:px-4 py-2.5">
         <div class="container flex flex-wrap justify-between items-center mx-auto">
-          <a href="/" class="flex items-center p-1 bg-light-gray/30 rounded-xl"><img src="/public/images/wv-logo-big.png" class="mr-3 h-6 sm:h-9" alt="WV Logo"></a>
+          <a href="/" class="flex items-center p-1 bg-light-gray/30 rounded-xl"><img src="/images/wv-logo-big.png" class="mr-3 h-6 sm:h-9" alt="WV Logo"></a>
           <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-dark-gold rounded-lg md:hidden bg-light-gray/30 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-600 transition-all duration-100 hover:text-gold" aria-controls="navbar-default" aria-expanded="false">
             <span class="sr-only">Open main menu</span>
             <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
@@ -57,19 +58,16 @@
             <div class="font-extrabold">
               <ul class="flex flex-col p-4 mt-4 bg-light-gray/30 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-lg md:font-medium md:border-0 md:bg-wv-gold">
                 <li>
-                  <a href="#" class="block py-2 pr-4 pl-3 text-dark-gold font-extrabold text-lg lg:text-xl transition-all duration-100 rounded hover:bg-light-gray/60 md:hover:bg-transparent md:border-0 md:hover:text-gold md:p-0 ">Home</a>
+                  <a href="#" class="block py-2 pr-4 pl-3 text-dark-gold font-extrabold text-lg lg:text-xl transition-all duration-100 rounded hover:bg-light-gray/60 md:hover:bg-transparent md:border-0 md:hover:text-gold md:p-0" onclick="redirect(0)">Home</a>
                 </li>
                 <li>
-                  <a href="#" class="block py-2 pr-4 pl-3 text-dark-gold font-extrabold text-lg lg:text-xl transition-all duration-100 rounded hover:bg-light-gray/60 md:hover:bg-transparent md:border-0 md:hover:text-gold md:p-0 ">Home</a>
+                  <a href="#" class="block py-2 pr-4 pl-3 text-dark-gold font-extrabold text-lg lg:text-xl transition-all duration-100 rounded hover:bg-light-gray/60 md:hover:bg-transparent md:border-0 md:hover:text-gold md:p-0" onclick="redirect(1)">Coaches</a>
                 </li>
                 <li>
-                  <a href="#" class="block py-2 pr-4 pl-3 text-dark-gold font-extrabold text-lg lg:text-xl transition-all duration-100 rounded hover:bg-light-gray/60 md:hover:bg-transparent md:border-0 md:hover:text-gold md:p-0 ">Home</a>
+                  <a href="#" class="block py-2 pr-4 pl-3 text-dark-gold font-extrabold text-lg lg:text-xl transition-all duration-100 rounded hover:bg-light-gray/60 md:hover:bg-transparent md:border-0 md:hover:text-gold md:p-0" onclick="redirect(2)">Roster</a>
                 </li>
                 <li>
-                  <a href="#" class="block py-2 pr-4 pl-3 text-dark-gold font-extrabold text-lg lg:text-xl transition-all duration-100 rounded hover:bg-light-gray/60 md:hover:bg-transparent md:border-0 md:hover:text-gold md:p-0 ">Home</a>
-                </li>
-                <li>
-                  <a href="#" class="block py-2 pr-4 pl-3 text-dark-gold font-extrabold text-lg lg:text-xl transition-all duration-100 rounded hover:bg-light-gray/60 md:hover:bg-transparent md:border-0 md:hover:text-gold md:p-0 ">Home</a>
+                  <a href="#" class="block py-2 pr-4 pl-3 text-dark-gold font-extrabold text-lg lg:text-xl transition-all duration-100 rounded hover:bg-light-gray/60 md:hover:bg-transparent md:border-0 md:hover:text-gold md:p-0" onclick="redirect(3)">Schedule</a>
                 </li>
               </ul>
             </div>
@@ -77,15 +75,17 @@
         </div>
       </nav>
 
+      <!-- <html-include src="/nav.html"></html-include> -->
+
     <!-- Main area -->
     <!-- <div class="bg-background bg-cover"> -->
-      <div class="p-8 grid grid-cols-3 gap-4 h-screen">
-        <div class="col-span-2 text-center">
-          <h1 class="font-extrabold px-48 drop-shadow-2xl shadow-red-900 text-gold text-2xl xs:text-3xl sm:text-4xl md:text-6xl lg:text-6xl xl:text-8xl">Westview Boys Water Polo</h1>
+      <div class="p-8 grid grid-rows-3 lg:grid-cols-3 gap-4 h-screen">
+        <div class="row-span-2 lg:col-span-2 text-center">
+          <h1 class="font-extrabold px-12 text-dark-gold text-3xl xs:text-3lg sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">Westview Boys Water Polo</h1>
         </div>
-        <div class="bg-gold rounded-xl opacity-90 align-center">
-          <div class="p-6 text-center">
-            <h1 class="font-extrabold text-md xs:text-l sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">Announcements</h1>
+        <div class="bg-dark-gold rounded-xl opacity-90 align-center">
+          <div class="text-center">
+            <h1 class="font-extrabold text-md xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">Announcements</h1>
           </div>
         </div>
       </div>
@@ -94,31 +94,31 @@
 
     <!-- Image Carousel -->
 
-    <div class="bg-dark-gray/90">
-      <div class="px-24 py-16 bg-wv-bg bg-cover">
-        <div class="bg-light-gray/80 p-8 rounded-2xl">
+    <div class="bg-slate-800">
+      <div class="px-8 py-12 md:px-16 md:py-24 lg:px-24 lg:py-36 bg-wv-bg bg-cover">
+        <div class="bg-dark-gray/40 p-6 rounded-2xl">
           <div id="indicators-carousel" class="relative" data-carousel="slide">
             <!-- Carousel wrapper -->
             <div class="relative h-56 overflow-hidden rounded-2xl md:h-96">
                 <!-- Item 1 -->
-                <div class="duration-1000 ease-in-out absolute inset-0 transition-all transform translate-x-0 z-20" data-carousel-item="active">
-                    <img src="/public/images/carousel1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                <div class="duration-500 ease-in-out absolute inset-0 transition-all transform translate-x-0 z-20" data-carousel-item="active">
+                    <img src="/images/background.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                 </div>
                 <!-- Item 2 -->
-                <div class="duration-1000 ease-in-out absolute inset-0 transition-all transform translate-x-full z-10" data-carousel-item="">
-                    <img src="/public/images/carousel1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                <div class="duration-500 ease-in-out absolute inset-0 transition-all transform translate-x-full z-10" data-carousel-item="">
+                    <img src="/images/carousel1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                 </div>
                 <!-- Item 3 -->
-                <div class="hidden duration-1000 ease-in-out absolute inset-0 transition-all transform" data-carousel-item="">
-                    <img src="/public/images/carousel1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                <div class="hidden duration-500 ease-in-out absolute inset-0 transition-all transform" data-carousel-item="">
+                    <img src="/images/background.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                 </div>
                 <!-- Item 4 -->
-                <div class="hidden duration-1000 ease-in-out absolute inset-0 transition-all transform" data-carousel-item="">
-                    <img src="/public/images/carousel1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                <div class="hidden duration-500 ease-in-out absolute inset-0 transition-all transform" data-carousel-item="">
+                    <img src="/images/carousel1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                 </div>
                 <!-- Item 5 -->
-                <div class="duration-1000 ease-in-out absolute inset-0 transition-all transform -translate-x-full z-10" data-carousel-item="">
-                    <img src="/public/images/carousel1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                <div class="duration-500 ease-in-out absolute inset-0 transition-all transform -translate-x-full z-10" data-carousel-item="">
+                    <img src="/images/background.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                 </div>
             </div>
             <!-- Slider controls -->
@@ -138,9 +138,6 @@
         </div>
       </div>
     </div>
-
-
-    
 
     <script src="https://unpkg.com/flowbite@1.5.2/dist/flowbite.js"></script>
   </body>
